@@ -17,4 +17,16 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <None Remove="Plugin.CloudFirestore" />
+	  <None Remove="Core\" />
+	  <None Remove="Util\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Plugin.CloudFirestore" Version="4.1.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Core\" />
+	  <Folder Include="Util\" />
+	</ItemGroup>
 </Project>
